@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pets",
+  "info": {
+    "name": "pet",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "big"
+      ],
+      "required": true,
+      "default": "small"
+    },
+    "weight": {
+      "type": "decimal"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "color": {
+      "type": "string",
+      "required": true
+    },
+    "url_image": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "enumeration",
+      "enum": [
+        "adopted",
+        "adoption",
+        "validation"
+      ]
+    },
+    "person": {
+      "model": "person"
+    },
+    "people": {
+      "collection": "person"
+    }
+  }
+}
