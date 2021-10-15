@@ -5,4 +5,12 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  async login() {
+    return true;
+  },
+
+  async logout() {
+    return true;
+  }
+};

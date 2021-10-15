@@ -10,14 +10,6 @@
     },
     {
       "method": "GET",
-      "path": "/people/count",
-      "handler": "person.count",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
       "path": "/people/:id",
       "handler": "person.findOne",
       "config": {
@@ -44,6 +36,22 @@
       "method": "DELETE",
       "path": "/people/:id",
       "handler": "person.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "handler": "person.login",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/logout",
+      "handler": "person.logout",
       "config": {
         "policies": []
       }

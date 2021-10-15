@@ -1,5 +1,11 @@
 {
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "PETS SERVER"
+  },
   "x-strapi-config": {
-    "pluginsForWhichToGenerateDoc": []
+    "pluginsForWhichToGenerateDoc": [],
+    "generateDefaultResponse": false
   }
 }

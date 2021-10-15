@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/pets": {
+    "/people": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Pet"
+                    "$ref": "#/components/schemas/Person"
                   }
                 }
               }
@@ -41,7 +41,7 @@
         },
         "summary": "",
         "tags": [
-          "Pet"
+          "Person"
         ],
         "parameters": [
           {
@@ -191,27 +191,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pet"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
+                  "$ref": "#/components/schemas/Person"
                 }
               }
             }
@@ -219,7 +199,7 @@
         },
         "summary": "",
         "tags": [
-          "Pet"
+          "Person"
         ],
         "requestBody": {
           "description": "",
@@ -227,14 +207,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPet"
+                "$ref": "#/components/schemas/NewPerson"
               }
             }
           }
         }
       }
     },
-    "/pets/count": {
+    "/people/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -244,11 +224,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Person"
                 }
               }
             }
@@ -276,50 +252,7 @@
         },
         "summary": "",
         "tags": [
-          "Pet"
-        ],
-        "parameters": []
-      }
-    },
-    "/pets/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Pet"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Pet"
+          "Person"
         ],
         "parameters": [
           {
@@ -343,7 +276,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pet"
+                  "$ref": "#/components/schemas/Person"
                 }
               }
             }
@@ -371,7 +304,7 @@
         },
         "summary": "",
         "tags": [
-          "Pet"
+          "Person"
         ],
         "requestBody": {
           "description": "",
@@ -379,7 +312,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPet"
+                "$ref": "#/components/schemas/NewPerson"
               }
             }
           }
@@ -435,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Pet"
+          "Person"
         ],
         "parameters": [
           {
@@ -450,16 +383,143 @@
           }
         ]
       }
+    },
+    "/login": {
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Person"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/logout": {
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Person"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
-      "Pet": {
+      "Person": {
         "required": [
           "id",
           "name",
-          "size",
-          "color"
+          "cpf",
+          "password",
+          "email",
+          "address_street",
+          "address_number",
+          "address_city",
+          "address_state"
         ],
         "properties": {
           "id": {
@@ -468,202 +528,65 @@
           "name": {
             "type": "string"
           },
-          "size": {
-            "type": "string",
-            "default": "small",
-            "enum": [
-              "small",
-              "medium",
-              "big"
-            ]
-          },
-          "weight": {
-            "type": "number"
-          },
-          "age": {
-            "type": "integer"
-          },
-          "color": {
+          "cpf": {
             "type": "string"
           },
-          "url_image": {
+          "password": {
+            "type": "string",
+            "format": "password"
+          },
+          "email": {
             "type": "string"
           },
-          "condition": {
-            "type": "string",
-            "enum": [
-              "adopted",
-              "adoption",
-              "validation"
-            ]
+          "address_street": {
+            "type": "string"
           },
-          "person": {
-            "required": [
-              "id",
-              "name",
-              "cpf",
-              "password",
-              "email",
-              "address_street",
-              "address_number",
-              "address_city",
-              "address_state"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "cpf": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "address_street": {
-                "type": "string"
-              },
-              "address_number": {
-                "type": "string"
-              },
-              "address_city": {
-                "type": "string"
-              },
-              "address_state": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "address_number": {
+            "type": "string"
           },
-          "people": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "cpf",
-                "password",
-                "email",
-                "address_street",
-                "address_number",
-                "address_city",
-                "address_state"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "cpf": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "address_street": {
-                  "type": "string"
-                },
-                "address_number": {
-                  "type": "string"
-                },
-                "address_city": {
-                  "type": "string"
-                },
-                "address_state": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "address_city": {
+            "type": "string"
           },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "address_state": {
+            "type": "string"
           }
         }
       },
-      "NewPet": {
+      "NewPerson": {
         "required": [
           "name",
-          "size",
-          "color"
+          "cpf",
+          "password",
+          "email",
+          "address_street",
+          "address_number",
+          "address_city",
+          "address_state"
         ],
         "properties": {
           "name": {
             "type": "string"
           },
-          "size": {
+          "cpf": {
+            "type": "string"
+          },
+          "password": {
             "type": "string",
-            "default": "small",
-            "enum": [
-              "small",
-              "medium",
-              "big"
-            ]
+            "format": "password"
           },
-          "weight": {
-            "type": "number"
-          },
-          "age": {
-            "type": "integer"
-          },
-          "color": {
+          "email": {
             "type": "string"
           },
-          "url_image": {
+          "address_street": {
             "type": "string"
           },
-          "condition": {
-            "type": "string",
-            "enum": [
-              "adopted",
-              "adoption",
-              "validation"
-            ]
-          },
-          "person": {
+          "address_number": {
             "type": "string"
           },
-          "people": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "created_by": {
+          "address_city": {
             "type": "string"
           },
-          "updated_by": {
+          "address_state": {
             "type": "string"
           }
         }
@@ -672,7 +595,7 @@
   },
   "tags": [
     {
-      "name": "Pet"
+      "name": "Person"
     }
   ]
 }
