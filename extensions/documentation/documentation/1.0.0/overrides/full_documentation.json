@@ -303,20 +303,13 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
+                    "person": {
+                      "$ref": "#/components/schemas/Person"
+                    },
+                    "jwt": {
                       "type": "string"
                     }
                   }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
                 }
               }
             }
@@ -336,7 +329,12 @@
             "application/json": {
               "schema": {
                 "properties": {
-                  "foo": {
+                  "email": {
+                    "required": true,
+                    "type": "string"
+                  },
+                  "passwrod": {
+                    "required": true,
                     "type": "string"
                   }
                 }
