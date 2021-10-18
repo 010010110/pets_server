@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/04/2021 9:30:31 PM"
+    "x-generation-date": "10/18/2021 6:47:07 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -291,7 +291,8 @@
           }
         ]
       }
-    },"/login": {
+    },
+    "/login": {
       "post": {
         "deprecated": false,
         "description": "Create a new record",
@@ -344,7 +345,8 @@
           }
         }
       }
-    },"/logout": {
+    },
+    "/logout": {
       "post": {
         "deprecated": false,
         "description": "Create a new record",
@@ -776,58 +778,7 @@
               "validation"
             ]
           },
-          "person": {
-            "required": [
-              "id",
-              "name",
-              "cpf",
-              "password",
-              "email",
-              "address_street",
-              "address_number",
-              "address_city",
-              "address_state"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "cpf": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "address_street": {
-                "type": "string"
-              },
-              "address_number": {
-                "type": "string"
-              },
-              "address_city": {
-                "type": "string"
-              },
-              "address_state": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "people": {
+          "candidates": {
             "type": "array",
             "items": {
               "required": [
@@ -880,6 +831,57 @@
                 }
               }
             }
+          },
+          "adopter": {
+            "required": [
+              "id",
+              "name",
+              "cpf",
+              "password",
+              "email",
+              "address_street",
+              "address_number",
+              "address_city",
+              "address_state"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "cpf": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "address_street": {
+                "type": "string"
+              },
+              "address_number": {
+                "type": "string"
+              },
+              "address_city": {
+                "type": "string"
+              },
+              "address_state": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -922,14 +924,17 @@
               "validation"
             ]
           },
-          "person": {
+          "donor": {
             "type": "string"
           },
-          "people": {
+          "candidates": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "adopter": {
+            "type": "string"
           }
         }
       },

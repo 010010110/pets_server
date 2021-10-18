@@ -47,11 +47,15 @@
         "validation"
       ]
     },
-    "person": {
+    "donor": {
+      "private": true,
       "model": "person"
     },
-    "people": {
+    "candidates": {
       "collection": "person"
+    },
+    "adopter": {
+      "model": "person"
     }
   }
 }

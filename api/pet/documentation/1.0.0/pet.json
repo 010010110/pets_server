@@ -497,58 +497,7 @@
               "validation"
             ]
           },
-          "person": {
-            "required": [
-              "id",
-              "name",
-              "cpf",
-              "password",
-              "email",
-              "address_street",
-              "address_number",
-              "address_city",
-              "address_state"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "cpf": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "address_street": {
-                "type": "string"
-              },
-              "address_number": {
-                "type": "string"
-              },
-              "address_city": {
-                "type": "string"
-              },
-              "address_state": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "people": {
+          "candidates": {
             "type": "array",
             "items": {
               "required": [
@@ -602,6 +551,57 @@
               }
             }
           },
+          "adopter": {
+            "required": [
+              "id",
+              "name",
+              "cpf",
+              "password",
+              "email",
+              "address_street",
+              "address_number",
+              "address_city",
+              "address_state"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "cpf": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "address_street": {
+                "type": "string"
+              },
+              "address_number": {
+                "type": "string"
+              },
+              "address_city": {
+                "type": "string"
+              },
+              "address_state": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -647,14 +647,17 @@
               "validation"
             ]
           },
-          "person": {
+          "donor": {
             "type": "string"
           },
-          "people": {
+          "candidates": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "adopter": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
