@@ -14,8 +14,4 @@ module.exports = {
       }
     }
   },
-
-  async logout() {
-    return true;
-  }
 };

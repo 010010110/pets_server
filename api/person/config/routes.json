@@ -47,14 +47,6 @@
       "config": {
         "policies": []
       }
-    },
-    {
-      "method": "POST",
-      "path": "/logout",
-      "handler": "person.logout",
-      "config": {
-        "policies": []
-      }
     }
   ]
 }
