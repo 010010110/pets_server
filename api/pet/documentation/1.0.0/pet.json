@@ -491,6 +491,7 @@
           },
           "condition": {
             "type": "string",
+            "default": "adoption",
             "enum": [
               "adopted",
               "adoption",
@@ -641,6 +642,7 @@
           },
           "condition": {
             "type": "string",
+            "default": "adoption",
             "enum": [
               "adopted",
               "adoption",

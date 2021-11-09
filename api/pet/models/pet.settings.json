@@ -45,7 +45,8 @@
         "adopted",
         "adoption",
         "validation"
-      ]
+      ],
+      "default": "adoption"
     },
     "donor": {
       "private": true,
